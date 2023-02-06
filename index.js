@@ -2,13 +2,13 @@ const OPTIONS = {
 	method: 'GET',
 	headers: {
         'X-RapidAPI-Key': 'be3d54d51amshd1a30175d9b9666p122037jsnbd48772bd236',
-        'X-RapidAPI-Host': 'ip-geolocation-and-threat-detection.p.rapidapi.com'
+		'X-RapidAPI-Host': 'ip-geo-location.p.rapidapi.com'
       }
 };
 
 
 const fetchIpInfo = ip => {
-    return fetch(`https://ip-geolocation-and-threat-detection.p.rapidapi.com/${ip}`, OPTIONS)
+    return fetch(`https://ip-geo-location.p.rapidapi.com/ip/${ip}?format=json`, OPTIONS)
     .then (res => res.json())
     .catch(err => console.error(err))
 }
